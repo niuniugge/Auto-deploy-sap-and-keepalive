@@ -1,12 +1,14 @@
 name: 自动部署代理到SAP
 
 on:
+  schedule:
+    - cron: '1/5 0 * * *'     # actions时间不准，不准确再酌情调整  
   workflow_dispatch:  # 只允许手动触发
     inputs:
       type:
         description: '选择部署的节点类型'
         required: true
-        default: 'Argo隧道CDN'
+        default: 'xhttp直连'
         type: choice
         options:
           - ws直连
