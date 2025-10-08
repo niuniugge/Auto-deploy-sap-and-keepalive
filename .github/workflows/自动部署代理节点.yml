@@ -2,7 +2,7 @@ name: 自动部署代理到SAP
 
 on:
   schedule:
-    - cron: '1/5 0 * * *'     # actions时间不准，不准确再酌情调整  
+    - cron: '1 0 * * *'     # actions时间不准，不准确再酌情调整  
   workflow_dispatch:  # 只允许手动触发
     inputs:
       type:
